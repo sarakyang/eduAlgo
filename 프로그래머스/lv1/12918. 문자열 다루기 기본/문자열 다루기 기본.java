@@ -11,6 +11,7 @@ class Solution {
 
         if (answer) {
             for (int i = 0; i < s.length(); i++) {
+                // 이게 수인지 아닌지 판별해주는 메소드 
                 if (Character.isDigit(ch[i])) {
                     answer = true;
                 } else {
