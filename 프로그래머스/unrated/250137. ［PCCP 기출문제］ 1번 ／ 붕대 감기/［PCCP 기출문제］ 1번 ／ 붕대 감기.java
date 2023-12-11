@@ -2,7 +2,6 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] bandage, int health, int[][] attacks) {
-        int answer = 0;
 
         int health_now = health;
         int success = 0;
@@ -36,7 +35,6 @@ class Solution {
 
             t++;
         }
-        if (health_now <= 0) health_now = -1;
 
         return health_now;
     }
