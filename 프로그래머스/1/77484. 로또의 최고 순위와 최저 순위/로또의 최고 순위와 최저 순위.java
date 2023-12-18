@@ -19,25 +19,21 @@ class Solution {
             }
         }
 
-
-        switch (high) {
-            case 6 -> answer[0] = 1;
-            case 5 -> answer[0] = 2;
-            case 4 -> answer[0] = 3;
-            case 3 -> answer[0] = 4;
-            case 2 -> answer[0] = 5;
-            default -> answer[0] = 6;
-        }
-        
-        switch (low) {
-            case 6 -> answer[1] = 1;
-            case 5 -> answer[1] = 2;
-            case 4 -> answer[1] = 3;
-            case 3 -> answer[1] = 4;
-            case 2 -> answer[1] = 5;
-            default -> answer[1] = 6;
-        }
+        answer[0] = rank(high);
+        answer[1] = rank(low);
 
         return answer;
     }
-}
+    
+    public int rank (int a) {
+        int i = 0;
+        switch (a) {
+            case 6 -> i = 1;
+            case 5 -> i = 2;
+            case 4 -> i = 3;
+            case 3 -> i = 4;
+            case 2 -> i = 5;
+            default -> i = 6;
+        }
+        return i;
+    }
